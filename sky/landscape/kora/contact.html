@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css2/contact.css">
+    <title>Contact Us - GreenScapes</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logos.jpeg" alt="GreenScapes Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="shop.html">Shop now</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to request our services, feel free to get in touch with us.</p>
+        
+        <form action="process_contacts_form.php" method="post">
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="contact-info">
+            <p>123 Greenery Lane</p>
+            <p>Landscapetown, CA 98765</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@greenscapes.com</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Site Map</a>
+        </div>
+        <p>&copy; 2023 The Riverstone Finishes & Landscapes. All rights reserved.</p>
+    </footer>
+</body>
+</html>

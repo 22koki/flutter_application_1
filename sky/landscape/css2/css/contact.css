@@ -1,0 +1,89 @@
+/* Apply styles to the body element */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(images/background.jpg); /* Change the image URL to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Style the h1 element */
+h1 {
+    color: #007bff;
+    font-size: 36px;
+}
+
+/* Style the main content */
+p {
+    font-size: 18px;
+    margin: 20px;
+}
+
+/* Style the customer service information */
+h2 {
+    font-size: 24px;
+    color: #0fe032;
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Style the contact form */
+form {
+    margin: 20px;
+    padding: 20px;
+    background-color: #3bf72a;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border: 1px solid #0bf8f8;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007bff;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Add any additional styling as needed */

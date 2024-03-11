@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css2/contacts.css"> <!-- Add your custom CSS file -->
+    <title>Contact Us - GreenLive</title>
+</head>
+<body>
+    <header>
+        <style>
+            .navbar-brand {
+                margin-right: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+            }
+    
+            .navbar-brand img {
+                width: 80px;
+                height: auto;
+                margin-right: 15px; /* Adjust the right margin to move the logo further left */
+            }
+    
+            .navbar-brand h1 {
+                font-size: 1.5rem;
+                margin: 0;
+                padding: 5px 0;
+            }
+        </style>
+    
+        <nav class="navbar nav-menu navbar-expand-lg navbar-dark ftco_navba bg-dark ftco-navbar-light navbar-fixed-top" id="ftco-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <!-- Add your logo here -->
+                    <img src="images/WhatsApp Image 2024-03-09 at 10.21.52 AM.jpeg" alt="Logo" class="logo-img">
+                    <!-- Logo text -->
+                    <h1>The Riverstone  Finishes<span> & Landscape</span></h1>
+                </a>
+                
+                <div class="collapse navbar-collapse" id="ftco-nav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">About us</a></li>
+                        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to request our services, feel free to get in touch with us.</p>
+        
+        <form action="process_contacts_form.php" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
+        <div class="reviews">
+            <h2>Customer Reviews</h2>
+            <!-- Add your review section here -->
+            <div class="review">
+                <p><strong>John Doe:</strong> "Great landscaping services! The team was professional and efficient."</p>
+            </div>
+            <div class="review">
+                <p><strong>Jane Smith:</strong> "Beautiful designs and excellent attention to detail. Highly recommended!"</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="contact-info">
+            <p>Sector 25, Pradhikaran, Nigdi, Maharashtra - Pune</p>
+            <p>Phone: +254721728539</p>
+            <p>Email: wahomewarish@gmail.com</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Site Map</a>
+        </div>
+        <p>&copy; All rights reserved | Designed by <a href="https://profcymaglobal.com/" target="_blank" style="color: #4e9525;">profcymaglobal</a></p>
+    </footer>
+</body>
+</html>

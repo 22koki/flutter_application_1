@@ -1,0 +1,124 @@
+/* Reset some default styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5f4e2; /* Light green background */
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #28a745; /* Set the background color to green */
+    padding: 15px; /* Add padding for better visual appeal */
+}
+
+.navbar-brand {
+    margin-right: 0; /* Remove any default margin */
+    text-align: center; /* Center the content */
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 80px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Optional: Add some margin for spacing */
+}
+
+.navbar-brand h1 {
+    color: #0d2203; /* Set the text color */
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-top: 10px; /* Optional: Adjust the top margin */
+    font-weight: 900; /* Make the text bold */
+    white-space: nowrap; /* Ensure text stays on one line */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar-toggler {
+    border-color: #ffffff; /* Set the border color for the toggle button */
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff; /* Set the color of the toggle button icon */
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.nav-item {
+    margin-right: 15px; /* Adjust the right margin between navigation items */
+}
+
+.nav-link {
+    color: #ffffff; /* Set the color of the navigation links */
+    font-size: 16px; /* Adjust the font size of the navigation links */
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Style the service section */
+.services {
+    text-align: center;
+    padding: 20px;
+}
+
+.box-heading {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjust as needed to control the spacing */
+}
+
+.service-list li {
+    width: 30%; /* Each service takes about 30% of the container width */
+    margin: 20px 0; /* Adjust top and bottom margins as needed */
+    padding: 20px;
+    background-color: #fff; /* White background for service boxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.service-list a {
+    text-decoration: none;
+    color: #333; /* Dark gray text color */
+    font-weight: bold;
+}
+
+.service-list p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+/* Add this CSS code at the end of your existing CSS file */
+.go-back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green color */
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+    background-color: #218838; /* Darker green color on hover */
+}

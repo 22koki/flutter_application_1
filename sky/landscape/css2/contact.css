@@ -1,0 +1,118 @@
+/* Reset some default styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Set a light background color */
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #fff; /* Highlight the active link */
+}
+
+.contact {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contact h2 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-info,
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+}
+
+/* Add more styles as needed */

@@ -1,0 +1,125 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    margin: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+/* Hero section styles */
+.hero {
+    background-image: url('landscape-hero.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* Services section styles */
+.services {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Service card styles (customize as needed) */
+.service {
+    margin: 20px;
+}
+
+.service img {
+    max-width: 100%;
+}
+
+/* Contact section styles */
+.contact {
+    background-color: #f2f2f2;
+    padding: 50px;
+    text-align: center;
+}
+
+/* About Us section styles */
+.about-us {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Contact Info styles */
+.contact-info {
+    margin: 20px 0;
+}
+
+/* Footer Links styles */
+.footer-links {
+    margin: 20px 0;
+}
+
+/* Footer link styles (customize as needed) */
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Newsletter section styles (customize as needed) */
+.newsletter {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Social Media section styles (customize as needed) */
+.social-media {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Social Media icon styles (customize as needed) */
+.social-media a {
+    margin: 0 10px;
+}
+
+/* Responsive styles can be added for different screen sizes */
