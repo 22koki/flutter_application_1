@@ -1,0 +1,107 @@
+/* Resetting default margins and padding for body, headings, and paragraphs */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Overall styling for the honey label container */
+.honey-label {
+    background-color: #FFDA44; /* Simulating a honey-like color */
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex; /* Added flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+}
+
+/* Styles for h1 element */
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styles for img element with class "logo" */
+.logo {
+    display: block;
+    margin-top: 20px; /* Adjust margin as needed */
+    margin-right: 70px;
+    width: 250px; /* Increased width for better visibility */
+    height: auto;
+    margin-left: 50px;
+}
+
+/* Styles for p element */
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #777;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Styling for the honeycomb background */
+.label-body {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: url('download\ \(3\).jpeg'); /* Updated background image path */
+    background-size: cover;
+    position: relative; /* Added position relative for positioning absolute elements */
+}
+
+/* Section styling within the body */
+.label-body section {
+    width: 30%;
+}
+
+/* Heading styling within the body */
+.label-body h2 {
+    font-size: 1.2em;
+    color: darkgreen;
+}
+
+/* Paragraph styling within the body */
+.label-body p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+.label-footer {
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
+.contact-section {
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.contact-section h3 {
+    font-size: 1.5em;
+    color: darkgreen;
+}
+
+.contact-section p {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .label-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .label-body section {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
