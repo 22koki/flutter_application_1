@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+var screens = [0];
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
