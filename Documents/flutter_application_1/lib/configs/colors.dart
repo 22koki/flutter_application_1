@@ -1,4 +1,4 @@
 import 'package:flutter/material.dart';
 
-const Color primaryColor = Colors.deepPurple;
+const Color primaryColor = Color.fromARGB(255, 10, 186, 255);
 const Color secondaryColor = Colors.blueAccent;
