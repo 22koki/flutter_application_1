@@ -1,19 +1,50 @@
-import 'package:flutter_application_1/views/home.dart';
-import 'package:flutter_application_1/views/login.dart';
-import 'package:flutter_application_1/views/registration.dart';
-import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:get/get.dart';
 
-var routes = [
+import '../views/add_patient_screen.dart';
+import '../views/dashboard_screen.dart';
+import '../views/edit_patient_screen.dart';
+import '../views/login.dart';
+import '../views/patient_details_screen.dart';
+import '../views/patient_list_screen.dart';
+import '../views/registration.dart';
+
+class AppRoutes {
+  static const String login = '/';
+  static const String registration = '/registration';
+  static const String dashboard = '/dashboard';
+  static const String patientList = '/patient-list';
+  static const String addPatient = '/add-patient';
+  static const String patientDetails = '/patient-details';
+  static const String editPatient = '/edit-patient';
+}
+
+final List<GetPage> routes = [
   GetPage(
-    name: "/",
-    page: () => Login(),
+    name: AppRoutes.login,
+    page: () => const Login(),
   ),
   GetPage(
-    name: "/register",
-    page: () => RegistrationScreen(),
+    name: AppRoutes.registration,
+    page: () => const RegistrationScreen(),
   ),
   GetPage(
-    name: "/home",
-    page: () => HomeScreen(),
+    name: AppRoutes.dashboard,
+    page: () => const DashboardScreen(),
+  ),
+  GetPage(
+    name: AppRoutes.patientList,
+    page: () => const PatientListScreen(),
+  ),
+  GetPage(
+    name: AppRoutes.addPatient,
+    page: () => const AddPatientScreen(),
+  ),
+  GetPage(
+    name: AppRoutes.patientDetails,
+    page: () => const PatientDetailsScreen(),
+  ),
+  GetPage(
+    name: AppRoutes.editPatient,
+    page: () => const EditPatientScreen(),
   ),
 ];
