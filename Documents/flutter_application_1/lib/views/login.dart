@@ -15,7 +15,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Grading Application'),
-        backgroundColor: primaryColor,
+        backgroundColor: AppColors.primaryColor,
         foregroundColor: Colors.white,
         centerTitle: true,
         actions: [
@@ -92,7 +92,7 @@ class _LoginState extends State<Login> {
                 onPressed: () {
                   Get.toNamed('/home');
                 },
-                color: primaryColor,
+                color: AppColors.primaryColor,
                 minWidth: 200,
                 child: Text(
                   'Login',
@@ -111,7 +111,7 @@ class _LoginState extends State<Login> {
                     child: Text(
                       'Not Registered? Sign Up',
                       style: TextStyle(
-                        color: secondaryColor,
+                        color: AppColors.primaryColor,
                       ),
                     ),
                     onTap: () {
@@ -125,7 +125,7 @@ class _LoginState extends State<Login> {
                     child: Text(
                       'Forgot Password? Reset',
                       style: TextStyle(
-                        color: secondaryColor,
+                        color: AppColors.primaryColor,
                       ),
                     ),
                     onTap: () {},

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../configs/colors.dart';
-import '../controllers/patient_controller.dart';
+import '../controllers/patient_controllers.dart';
 import '../models/patient.dart';
 
 class EditPatientScreen extends StatefulWidget {

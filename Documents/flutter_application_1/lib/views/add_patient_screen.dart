@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../configs/colors.dart';
-import '../controllers/patient_controller.dart';
+import '../controllers/patient_controllers.dart';
 import '../models/patient.dart';
 
 class AddPatientScreen extends StatefulWidget {
@@ -22,7 +22,7 @@ class _AddPatientScreenState extends State<AddPatientScreen> {
 
   String selectedGender = 'Male';
 
-  final PatientControllers patientController = Get.find();
+  final PatientController patientController = Get.find();
 
   @override
   void dispose() {

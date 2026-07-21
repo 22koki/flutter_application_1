@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import '../configs/colors.dart';
 import '../configs/routes.dart';
-import '../controllers/patient_controller.dart';
+import '../controllers/patient_controllers.dart';
 
 class PatientDetailsScreen extends StatelessWidget {
   const PatientDetailsScreen({super.key});

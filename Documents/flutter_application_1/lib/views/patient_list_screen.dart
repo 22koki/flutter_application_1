@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import '../configs/colors.dart';
 import '../configs/routes.dart';
-import '../controllers/patient_controller.dart';
+import '../controllers/patient_controllers.dart';
 
 class PatientListScreen extends StatelessWidget {
   const PatientListScreen({super.key});
@@ -102,7 +102,7 @@ class PatientListScreen extends StatelessWidget {
   }
 
   void showDeleteDialog(
-    PatientController patientController,
+    PatientController patientControllers,
     int index,
   ) {
     Get.defaultDialog(
@@ -112,7 +112,7 @@ class PatientListScreen extends StatelessWidget {
       textConfirm: 'Delete',
       confirmTextColor: Colors.white,
       onConfirm: () {
-        patientController.deletePatient(index);
+        patientControllers.deletePatient(index);
         Get.back();
 
         Get.snackbar(
