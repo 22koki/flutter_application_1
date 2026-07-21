@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/configs/colors.dart';
+import 'package:flutter_application_1/configs/routes.dart';
 import 'package:get/get.dart';
 
 class Login extends StatefulWidget {
@@ -10,125 +11,150 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  bool hidePassword = true;
+
+  void loginUser() {
+    if (usernameController.text.trim().isEmpty ||
+        passwordController.text.trim().isEmpty) {
+      Get.snackbar(
+        'Missing information',
+        'Enter your username and password',
+        snackPosition: SnackPosition.BOTTOM,
+      );
+
+      return;
+    }
+
+    Get.offAllNamed(AppRoutes.home);
+  }
+
+  @override
+  void dispose() {
+    usernameController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
-        title: Text('Grading Application'),
+        title: const Text('Hospital Management System'),
         backgroundColor: AppColors.primaryColor,
         foregroundColor: Colors.white,
         centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.settings),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.logout),
-          ),
-        ],
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    'assets/logo.png',
-                    height: 200,
-                    width: 400,
-                  ),
-                ],
+              Image.asset(
+                'assets/logo.png',
+                height: 180,
+                width: 300,
+                fit: BoxFit.contain,
               ),
-
-              SizedBox(height: 20),
-
-              Row(
+              const SizedBox(height: 20),
+              const Row(
                 children: [
                   Text(
                     'Username',
                     style: TextStyle(
-                      color: Colors.deepOrange,
+                      color: AppColors.primaryColor,
                     ),
                   ),
                 ],
               ),
-
+              const SizedBox(height: 5),
               TextField(
-                decoration: InputDecoration(
+                controller: usernameController,
+                decoration: const InputDecoration(
+                  hintText: 'Enter username',
                   prefixIcon: Icon(Icons.person),
                   border: OutlineInputBorder(),
                 ),
               ),
-
-              SizedBox(height: 20),
-
-              Row(
+              const SizedBox(height: 20),
+              const Row(
                 children: [
                   Text(
                     'Password',
                     style: TextStyle(
-                      color: Colors.deepOrange,
+                      color: AppColors.primaryColor,
                     ),
                   ),
                 ],
               ),
-
+              const SizedBox(height: 5),
               TextField(
-                obscureText: true,
+                controller: passwordController,
+                obscureText: hidePassword,
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.lock),
-                  border: OutlineInputBorder(),
-                ),
-              ),
-
-              SizedBox(height: 20),
-
-              MaterialButton(
-                onPressed: () {
-                  Get.toNamed('/home');
-                },
-                color: AppColors.primaryColor,
-                minWidth: 200,
-                child: Text(
-                  'Login',
-                  style: TextStyle(
-                    color: Colors.white,
+                  hintText: 'Enter password',
+                  prefixIcon: const Icon(Icons.lock),
+                  border: const OutlineInputBorder(),
+                  suffixIcon: IconButton(
+                    onPressed: () {
+                      setState(() {
+                        hidePassword = !hidePassword;
+                      });
+                    },
+                    icon: Icon(
+                      hidePassword
+                          ? Icons.visibility
+                          : Icons.visibility_off,
+                    ),
                   ),
                 ),
               ),
-
-              SizedBox(height: 20),
-
+              const SizedBox(height: 25),
+              MaterialButton(
+                onPressed: loginUser,
+                color: AppColors.primaryColor,
+                minWidth: 220,
+                height: 45,
+                child: const Text(
+                  'Login',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
-                    child: Text(
+                    onTap: () {
+                      Get.toNamed(AppRoutes.registration);
+                    },
+                    child: const Text(
                       'Not Registered? Sign Up',
                       style: TextStyle(
                         color: AppColors.primaryColor,
                       ),
                     ),
-                    onTap: () {
-                      Get.toNamed('/register');
-                    },
                   ),
-
-                  Spacer(),
-
+                  const Spacer(),
                   GestureDetector(
-                    child: Text(
+                    onTap: () {
+                      Get.snackbar(
+                        'Reset Password',
+                        'Password reset is not available yet',
+                        snackPosition: SnackPosition.BOTTOM,
+                      );
+                    },
+                    child: const Text(
                       'Forgot Password? Reset',
                       style: TextStyle(
                         color: AppColors.primaryColor,
                       ),
                     ),
-                    onTap: () {},
                   ),
                 ],
               ),
