@@ -116,18 +116,9 @@ class _AddPatientScreenState extends State<AddPatientScreen> {
                   prefixIcon: Icon(Icons.people),
                 ),
                 items: const [
-                  DropdownMenuItem(
-                    value: 'Male',
-                    child: Text('Male'),
-                  ),
-                  DropdownMenuItem(
-                    value: 'Female',
-                    child: Text('Female'),
-                  ),
-                  DropdownMenuItem(
-                    value: 'Other',
-                    child: Text('Other'),
-                  ),
+                  DropdownMenuItem(value: 'Male', child: Text('Male')),
+                  DropdownMenuItem(value: 'Female', child: Text('Female')),
+                  DropdownMenuItem(value: 'Other', child: Text('Other')),
                 ],
                 onChanged: (value) {
                   setState(() {
@@ -174,7 +165,7 @@ class _AddPatientScreenState extends State<AddPatientScreen> {
                 height: 48,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: AppColors.primaryColor,
+                    backgroundColor: const Color.fromARGB(255, 12, 128, 236),
                     foregroundColor: Colors.white,
                   ),
                   onPressed: savePatient,
