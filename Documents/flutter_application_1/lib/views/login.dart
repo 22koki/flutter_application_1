@@ -60,28 +60,35 @@ class _LoginState extends State<Login> {
 
     try {
       final Uri url = Uri.parse(
-        'http://localhost/hospital_api/login.php',
-      );
-
+  'http://localhost/hospital_api/login.php',
+);
       final http.Response response = await http.post(
-        url,
-        headers: {
-          'Accept': 'application/json',
-        },
-        body: {
-          'username': username,
-          'password': password,
-        },
-      );
+       url,
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/x-www-form-urlencoded',
+  },
+  body: {
+    'username': username,
+    'password': password,
+  },
+);
 
-      if (response.statusCode != 200) {
-        throw Exception(
-          'Server returned status ${response.statusCode}',
-        );
-      }
+if (response.statusCode != 200) {
+  throw Exception(
+    'Server returned status ${response.statusCode}',
+  );
+}
 
-      final dynamic decodedResponse =
-          jsonDecode(response.body);
+final String cleanBody = response.body
+    .replaceFirst('\uFEFF', '')
+    .trim();
+
+debugPrint('STATUS: ${response.statusCode}');
+debugPrint('RAW RESPONSE: $cleanBody');
+
+final dynamic decodedResponse =
+    jsonDecode(cleanBody);
 
       if (decodedResponse is! Map<String, dynamic>) {
         throw Exception('Invalid server response');

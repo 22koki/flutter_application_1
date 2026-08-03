@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../../opt/lampp/htdocs/hospital_api"
+		}
+	],
+	"settings": {}
+}
