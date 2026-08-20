@@ -18,6 +18,7 @@ class PatientDetailsScreen extends StatelessWidget {
         index >= patientController.patients.length) {
       return Scaffold(
         appBar: AppBar(
+      
           title: const Text('Patient Details'),
         ),
         body: const Center(
